@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Paddy's contact page -->
+<html lang="en">
+	<head>
+	
+	<!-- I (Paddy) followed Emers instructions in our week 4 recording to help me add the meta name tag and make my webpage responsive -->
+	<title>Contact page</title>
+	<link rel="stylesheet" href="style2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- adding a google font from https://fonts.google.com/specimen/Tangerine?query=tangerine -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+	
+		<script> 
+	
+		// code taken from Emers Week 9 - Thursday classwork form-validation3 folder, I (Paddy) manipulated it to add a validation box for a phone number. 
+		
+		function validate(){
+			var formData = []; //this variable will hold the information relating to the forms
+			//assigning the name to index 0
+			formData[0] = document.getElementById("nameData").value; 
+			
+			//1 will be used for email, 2 will be used for phone			
+			formData[1] = document.getElementById("emailData").value; 
+			formData[2] = document.getElementById("phoneData").value;
+			//I added in this formData 2 for the phone number box.
+			
+			//this is the JS for our name input, anything less than 5 letters will return invalid
+			if(formData[0].length <5){
+				document.getElementById("feedback").innerHTML = "not a valid name";
+			}
+			
+			//I (Paddy) re-used this block of code from the previous block relating to the name field, I changed the fromData to 2 and the feedback to 2 so it would target the phone number input instead. If any number less than 10 is entered, it will return invalid.
+			if(formData[2].length <10){
+				document.getElementById("feedback2").innerHTML = "not a valid number";
+			}
+			
+			//validating the email. If what is entered doesn't contain the @ symbol, it will return invalid.
+			var symbol = formData[1].indexOf('@');
+			
+			
+			if(symbol < 1){
+				document.getElementById("emailFeedback").innerHTML = "Not a valid email";
+			}
+			
+		}
+	
+	</script>
+	
+		
+	
+	</head>
+	
+	<!-- all my content on display will be in my (Paddy) body -->
+	
+	<!-- I (Paddy) used this link https://css-tricks.com/id-your-body-for-greater-css-control-and-specificity/ to help my create an id name for my contact and gallery page so I could target them serperately using the stylesheet -->
+	
+	<body id="contact-page">
+	
+	<!-- code taken from Emmanuels home so the nav bars would be on all pages to allow consistent navigation throughout the website -->
+			
+			<div class="containerfluid">
+				<!--nav-->
+				<ul class="nav">
+				  <li class="nav-item">
+					<a class="nav-link active"aria-current="page" href="index.html">Home</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="index4.html">Gallery Collection</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="index2.html">Game </a>
+				  </li>
+					<li class="nav-item">
+					<a class="nav-link" href="index3.html">Contact Us </a>
+				  </li>
+				</ul>
+			
+			
+	<!-- adding a div to my heading so I (Paddy) can style it in my stylesheet -->
+	
+	<div id="pineapple">
+	<h2>Contact Us:</h2>
+	</div>
+	
+	<!-- I (Paddy) use these divs to position my form -->
+		<div>
+		
+			<!-- I (Paddy)looked at the slides from week 4 to find out how to include a form -->
+			
+			<!-- I (Paddy) created a form tag so I can target it in the CSS stylesheet. I included method, post, action to send the email to my email address. I changed the size of the text boxes by using size=23 or whatever worked well -->
+			
+			
+			
+			<!-- form for contact page -->
+			
+			<form id="form-pot" class="submit" method="post" action="mailto:x21105120@student.ncirl.ie">
+				<label>Enter your full name:</label>
+				<input type="text" id="nameData" size=23>
+				<p id="feedback"> </p>
+				
+				<label>Phone number:</label>
+				<input type="text" id="phoneData" size=30>
+				<p id="feedback2"> </p>
+				
+				<label>Enter your email:</label>
+				<input type="text" id="emailData" size=29>
+				<p id="emailFeedback"></p>
+				
+				<label>Message:</label>
+				<!-- I used rows and cols to make my text area box bigger -->
+				<br>
+				<textarea rows="5" cols="60" placeholder="Your message"></textarea>
+				<!-- submit button for the entire form, as opposed to having multiple submit buttons, which wouldn't make sense -->
+				<br>
+				<input type="button" value="submit" onclick="validate()">
+				
+				<!-- the onclick=validate part allows me (Paddy) to validate all forms with one submit button -->
+	
+			</form>
+			
+			
+					
+		</div>
+		
+		
+	
+	
+	</body>
+</html>

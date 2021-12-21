@@ -1,0 +1,387 @@
+/* https://www.w3schools.com/cssref/pr_background-position.asp I (Paddy) used this W3 schools page to help me add and manipulate a background image */
+#contact-page {
+  background-image: url('images/festivalscolors.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100%;
+  /* I (Paddy) set background size at 100% 100% to fill the background image to the screen */
+  height: 10%;
+  font-family: 'Tangerine', cursive;
+  font-size:250%;
+  margin-top: -2%; 
+}
+
+
+#pineapple {
+	text-align:center;
+}
+
+#apple {
+	text-align:center;
+	font-size:xx-large;
+}
+
+
+
+#gallery-page1 {
+	background-color: yellow;
+	font-family: 'Tangerine', cursive; 
+	
+}
+/* the google font Paddy is using for his contact and Gallery page is Tangerine */
+
+/* font-family: 'Tangerine', cursive; */
+
+img {
+	height: 200px;
+	width: 200px;
+}
+
+/* I (Paddy) can use these to add style to my images */
+/* .blur {filter: blur(4px);} */
+
+/*.grayscale {filter: grayscale(100%);} */
+
+
+
+
+#form-pot {
+	max-width: 600px;
+	position:center;
+	margin:0 auto;
+}
+
+
+
+
+
+/* I (Paddy) used this template CSS code given to us by Emer from Week 10 Wed code - manipulating the DOM, I re-used it x6 for each image */
+		
+.list{
+	color: red;
+	font-family: Times New Roman;
+	font-size: default;
+}
+
+.hideList{
+	display: none;
+}
+
+.showList{
+	display: visible;
+}
+
+		
+.list2{
+	color: red;
+	font-family: Times New Roman;
+	font-size: default;
+}
+
+.hideList2{
+	display: none;
+}
+
+.showList2{
+	display: visible;
+}
+
+.list3{
+	color: red;
+	font-family: Times New Roman;
+	font-size: default;
+}
+
+.hideList3{
+	display: none;
+}
+
+.showList3{
+	display: visible;
+}
+
+.list4{
+	color: red;
+	font-family: Times New Roman;
+	font-size: default;
+}
+
+.hideList4{
+	display: none;
+}
+
+.showList4{
+	display: visible;
+}
+
+.list5{
+	color: red;
+	font-family: Times New Roman;
+	font-size: default;
+}
+
+.hideList5{
+	display: none;
+}
+
+.showList5{
+	display: visible;
+}
+
+.list6{
+	color: red;
+	font-family: Times New Roman;
+	font-size: default;
+}
+
+.hideList6{
+	display: none;
+}
+
+.showList6{
+	display: visible;
+}
+
+/* I (Paddy) used this w3 link to position my images side by side https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_images_side_by_side, the float:left is the most important element here, causing the images to be beside eachother */
+
+.column1 {
+  float:left;
+  width: 16%;
+  padding: 5px;
+  
+}
+
+.column2 {
+  float:left;
+  width: 16%;
+  padding: 5px;
+  
+}
+
+.column3 {
+  float:left;
+  width: 16%;
+  padding: 5px;
+  
+}
+
+.column4 {
+  float:left;
+  width: 16%;
+  padding: 5px;
+  
+}
+
+.column5 {
+  float:left;
+  width: 16%;
+  padding: 5px;
+  
+}
+
+.column6 {
+  float:left;
+  width: 15%;
+  padding: 5px;
+  
+}
+
+.row {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* I (Paddy) took the boxing sizing element from this w3 schools link https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_images_side_by_side_resp about responsive images */
+ *{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* The display table element is used here to lay my (Paddy) images beside eachother */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* I (Paddy) used this w3 schools link to make my gallery page resposnsive https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_images_side_by_side_resp */
+
+/* ryan got All rem codes found from 23 schools https://www.w3schools.com/cssref/css_units.asp */
+
+/*ryan trageted all of his Div classes with a R at the beginning of each*/
+
+.rh1{font-family: 'Noto Serif Display', serif;
+   font-family: 'Roboto Slab', serif;
+   color: #D4D5A4;
+   font-weight: 900;
+   font-size: 30px;
+   letter-spacing: 10px;
+   margin-bottom: 4rem;
+
+  
+}
+
+.rh2{
+	color: #D4D5A4 ;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+
+
+
+
+
+
+.rbody{
+	background-image: url('images/BG.png');
+	 background-repeat: no-repeat;
+	 background-size: 100% 100%;
+	font-family: 'Noto Serif Display', serif;
+    font-family: 'Roboto Slab', serif; 
+}
+	
+
+.rcontainer{
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0 5rem;
+	margin-top: 4rem;
+	text-align: center;
+}
+
+.rimage{
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+.rp{
+	font-size: 20px;
+	color: #fff;
+	line-height: 3rem;
+	margin-bottom: 5rem;
+}
+
+#rbtn{
+	display: inline-block;
+	padding: 1rem 4rem;
+	background: #926FC1;
+	font-size: 1rem;
+	color: #FF3399;
+	border-radius: 5px;
+	transition: background 0.5s;
+}
+
+.rbar{
+	background: #926FC1;
+	color: #D4D5A4;
+}
+ /* ryan used Hover and transition button styling found on w3 schools https://www.w3schools.com/css/css3_buttons.asp */
+
+.rbtn:hover{
+	background: #dadada;
+}
+
+/*@media screen and (max-width: 800px)*/ 
+.Home{
+	background-image:url("images/background.jpeg");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100% ;
+
+  height: 10%;
+  font-size:100%;
+}
+
+.nav{
+	//*background-color: red;**/
+	border-color:black 3px solid;
+}
+
+.Bar {
+  display: block;
+  width: 300px;
+  //*background-image: url("logo.jpeg.png");*/
+  height: 50px;
+  background-color:yellow;
+  position:relative ;
+  font-size :110%
+  }
+.main{
+	width:70%;
+	float:left;
+	height:650px;
+	position:relative;
+	left:300px;
+	background-color:palevioletred; //** Colour was chosen to match or logo*/
+	font-family: 'Ubuntu' sans-serif; 
+	//** I chose this font for its lively appearance to suit the theme of festival*/
+}
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+	position: relative ;
+}
+.div{
+	width:400px;
+}
+@media screen and (max-width: 320px) {
+.column1 {
+    width: 100%;
+  }
+  li a {
+  display: block;
+  width: 150px;
+  //*background-image: url("logo.jpeg.png");*/
+  height: 15px;
+  background-color:yellow;
+  position:relative ;
+  font-size :40%
+  }
+  .main{
+	width:70%;
+	float:left;
+	height:305px;
+	left:;
+	background-color:palevioletred; //** Colour was chosen to match or logo*/
+	font-family: 'Ubuntu' sans-serif; 
+	//** I chose this font for its lively appearance to suit the theme of festival*/
+	font-size:25% ;
+}
+
+
+.rp{
+	font-size: 15px;
+	color: #1ABC9C;
+}
+
+.rh2{
+	font-size: 20px;
+	color: #FFF;
+}
+
+.rh1{
+	font-size: 30px;
+	color: #1ABC9C;
+	letter-spacing: 5px;
+}
+
+.rimage{
+	size: 100px;
+}
+
+
+
+}

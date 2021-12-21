@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+	<!-- adding a google font from https://fonts.google.com/specimen/Tangerine?query=tangerine -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+		
+		<!-- linking this page to my external JS page -->
+		<script src="group-project.js"></script>
+		
+		<!-- title of the webpage -->
+		<title>Using JS to display text over image</title>
+		
+	
+	<!-- I followed Emers instructions in our week 4 recording to help me add the meta name tag and make my webpage responsive -->
+	
+	<link rel="stylesheet" href="style2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		
+	
+	</head>
+	
+	<!-- I used this link https://css-tricks.com/id-your-body-for-greater-css-control-and-specificity/ to help my create an id name for my contact and gallery page so I could target them serperately using the stylesheet -->
+	
+	<body id="gallery-page1">
+	
+	<!-- I (Paddy) used this w3 schools link to help me make images responsive side by side, which is how I knew to add row1 and column 1 -->
+	
+	<div id="apple">
+	<h1>Gallery Page:</h1>
+	</div>
+	
+	<!-- code taken from Emmanuels home page the nav bars will be on all pages to keep it consistent -->
+			
+			<div class="containerfluid">
+				<!--nav-->
+				<ul class="nav">
+				  <li class="nav-item">
+					<a class="nav-link active"aria-current="page" href="index.html">Home</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="index4.html">Gallery Collection</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="index2.html">Game </a>
+				  </li>
+					<li class="nav-item">
+					<a class="nav-link" href="index3.html">Contact Us </a>
+				  </li>
+				</ul>
+			</div>
+	
+	
+	
+	<div class="row1">
+			<div class="column1">
+				<!-- here I'm adding in the hidden information related to the images -->
+				<ul class="list hideList" id="menu">
+					<!-- this is the text that will be hidden my images -->
+					<li>I'm Anderson .Paak</li>
+					<li>I'll be playing at B Happy Festival</li>
+					<li>Come chill with us. Yes Lawd!</li>
+				</ul>
+				<!-- onmouse over will signal to the hidden code to appear once the mouse hover over it -->
+				<button type="button" onmouseover="changeCSS()" onclick ="hide()">Hover and Click Here </button>
+				<!--              ^^^^^^^^^^^^^^^^^^^^ this will be the name of the button used to display the hidden text behind the images -->
+				<br>
+				<img src="images/anderson.paak.jpg" alt="Anderson .Paak" style="width:100%">
+				<br>
+				<br>
+			</div>
+				<!-- I (Paddy) re-used this block of code 6 times for my 6 images -->
+			
+			<div class="column1">
+				<ul class="list hideList2" id="menu2">
+					<li>Heyy!</li>
+					<li>It's Kali Uchis</li>
+					<li>I'll be playing at B Happy Festival</li>
+					<li>See you <br> there xo</li>
+					
+				</ul>
+				
+				<button type="button" onmouseover="changeCSS2()" onclick ="hide2()">Hover and Click Here </button>
+				<br>
+				<img src="images/kali-uchis.jpg" alt="Kali Uchis" style="width:100%">
+				<br>
+				<br>
+			</div>
+				
+			<div class="column1">
+				<!-- x3 -->
+				<ul class="list hideList3" id="menu3">
+					<li>Motor City Drum Ensemble here</li>
+					<li>I'll be playing at B Happy Festival</li>
+					<li>Get on down and groove, Let's party!</li>
+				</ul>
+				<button type="button" onmouseover="changeCSS3()" onclick ="hide3()">Hover and Click Here </button>
+				<br>
+				<img src="images/mcde.jpg" alt="Motor City Drum Ensemble" style="width:100%">
+				<br>
+				<br>
+			</div>
+			
+			<div class="column1">
+				<!-- x4 -->
+				<ul class="list hideList4" id="menu4">
+					<li>It's Little Simz here, innit?</li>
+					<li>I'll be playing at B Happy Festival</li>
+					<li>Good beats, good times, join us!</li>
+				</ul>
+				<button type="button" onmouseover="changeCSS4()" onclick ="hide4()">Hover and Click Here </button>
+				<br>
+				<img src="images/Little-simz.jpg" alt="Little Simz" style="width:100%">
+				<br>
+				<br>
+			</div>	
+				<!-- x5 --> 
+				
+			<div class="column1">
+				
+				<ul class="list hideList5" id="menu5">
+					<li>It's Tyler The Creator here,</li>
+					<li>I'll be playing at B Happy Festival</li>
+					<li>See you there for Flower Boy fun!</li>
+				</ul>
+				<button type="button" onmouseover="changeCSS5()" onclick ="hide5()">Hover and Click Here </button>
+				<br>
+				<img src="images/tyler-the-creator.jpg" alt="Tyler the creator" style="width:100%">
+				<br>
+				<br>
+			</div>
+				<!-- x6, I made use of break tags, they helped a lot with the positioning of the buttons above the images -->
+				
+			<div class="column1">
+				
+				<ul class="list hideList6" id="menu6">
+					<li>Dance till your drop!</li>
+					<li>Peggy Gou here</li>
+					<li>I'll be playing at B Happy Festival</li>
+					<li>You don't want to miss it!</li>
+				</ul>
+				<button type="button" onmouseover="changeCSS6()" onclick ="hide6()">Hover and Click Here </button>
+				<br>
+				<img src="images/peggy-gou.jpg" alt="Peggy Gou" style="width:100%">
+
+			</div>
+				<!-- images used -->
+				<!-- <img src="images/anderson.paak.jpg" alt="Anderson .Paak">
+				<img src="images/kali-uchis.jpg" alt="Kali Uchis">
+				<img src="images/mcde.jpg" alt="Motor City Drum Ensenmble">
+				<img src="images/Little-simz.jpg" alt="Little Simz">
+				<img src="images/tyler-the-creator.jpg" alt="Tyler the creator">
+				<img src="images/peggy-gou.jpg" alt="Peggy Gou"> -->
+	</div>
+		
+		
+		<br>
+		<br>
+		<h1>Welcome to our gallery page for our B Happy Festival website, we're the acts playing! Click the buttons that say "Hover and Click Here to find out more about us. Party on!</h1>
+	
+	</body>
+	
+</html>

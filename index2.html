@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+	<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+	<title>while You Wait Page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,500&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script>
+	function game(){
+			//set up variables
+			var uGuess;
+			var msge;
+			var winnerScores = [0,0]; //index 0 = comp, index 1 = user
+			
+			//play game 3 times using for loop
+			for(i = 1; i < 3; i++){
+				//set up random number - cGuess
+				//Math.random returns a random number between 0-1 so we multiply by 3. Math.floor rounds down to nearest whole number
+				var cGuess = Math.floor(Math.random()*2)+1;
+				alert("Computer random guess" + cGuess); //testing line
+				//get user guesses
+				uGuess = parseInt(prompt("Enter 1 for Heads, 2 for Tales", "1-2"));
+				//compare the guesses
+				if(cGuess === 1){//comp guess is heads
+					if(uGuess ===1){
+						msge="User Wins!";
+					}else if(uGuess === 2){
+						msge = "Computer Wins!";
+						//update user score
+						winnerScores[1]++;
+					}
+				}else if(cGuess === 2){//if comp guess is Tales
+					if(uGuess ===1){
+						msge="computer is winner";
+						//update comp score
+						winnerScores[0]++;
+					}else if(uGuess === 2){
+						msge = "User is the Winner!!";
+					}
+					
+				}
+				//give the user feedback
+				alert(msge);
+			}//end of for loop	
+			
+			//give the over all scores outside the for loop
+			document.getElementById("userInfo").innerHTML = "User score " +winnerScores[1]+ " comp score " +winnerScores[0];
+			
+		} //end function
+	</script>
+</head>
+
+    <body class="rbody">
+	<div class="rbar">
+	<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active"aria-current="page" href="index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="index4.html">Gallery Collection</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="index2.html">Game</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="index3.html">Contact Us </a>
+  </li>
+</ul>
+</div>
+
+
+   
+   <div class="rcontainer">
+	    <div class="rh1">
+		<h1>While You Wait For A Response!</h1>
+		</div>
+		
+		<div class="rimage">
+		    <img src="images/logo.jpeg.png" alt="logo">
+		</div>
+		
+		<div class="rh2">
+		<h2>Have A Read</h2>
+		</div>
+	    
+		<div class="rp">
+		<p>Hello while you wait for a quick response from our "B" Happy Festival team, take a look around our website, see what we are all about and have fun and play this game if your up for it, Thank you for using "B" Happy Festivals service i hope you recieve a reply from us soon. </p>
+		</div>
+		
+	   
+		
+    <div id="rbtn">
+	<input type="button" value="Click To Play" onclick="game()">
+	</div>
+	
+	<div id="userInfo"></div>
+	
+    </div>
+  </body>
+ 
+	
+	
+</html>
